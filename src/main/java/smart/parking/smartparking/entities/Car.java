@@ -1,6 +1,8 @@
 package smart.parking.smartparking.entities;
 
-import javax.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Car {
@@ -13,7 +15,8 @@ public class Car {
     @OneToOne
     private Emission emission;
 
-    public Car() {}
+    public Car() {
+    }
 
     public Car(String id, CarCategory carCategory, Emission emission) {
         this.id = id;
